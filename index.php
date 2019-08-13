@@ -32,7 +32,7 @@ if($_GET['category']){
 }
 $category = $_COOKIE["category"];
 
-$cacheName = $domain."/video.php?". ($category == '' ? "" : "category={$category}") ."&page=".$page;//缓存名
+$cacheName = $domain."/v.php?". ($category == '' ? "" : "category={$category}") ."&page=".$page;//缓存名
 $list=$file->get($cacheName);
 if(!$list){
     $list = getList($domain,$page);
